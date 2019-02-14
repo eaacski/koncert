@@ -7,7 +7,7 @@ html {
 
 .bg {
     /* Photo by 𝚂𝚒𝚘𝚛𝚊 𝙿𝚑𝚘𝚝𝚘𝚐𝚛𝚊𝚙𝚑𝚢 on Unsplash */
-    background-image: url("baggrundsfoto.jpg");
+    background-image: url("kobmand.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@ html {
 .boks__style {
     align-self: center;
     width: auto;
-    background-color: white;
+    background-color: lightcyan;
     opacity: 0.9;
 }
 

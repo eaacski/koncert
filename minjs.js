@@ -30,20 +30,33 @@ function videoKontrol(elementId, visKontroller){
 		
 											}
 	}
-
+function visOpdateringsDato (elementId, farve, placering, ledetekst){
+	var dokumentDato = new Date(document.lastModified).toLocaleTimeString("da-DK");
+	var opdateretTekst ="";
+	
+	if (ledetekst === true){
+		opdateretTekst="Sidst opdateret:"+ dokumentDato;
+		} else{
+			opdateretTekst=dokumentDato;
+		}
+	document.getElementById(elementId).style.color =farve;
+	document.getElementById(elementId).style.textAlign=placering;
+	document.getElementById(elementId).innerText=opdateretTekst;
+}
 
 //hovedprogram-del
 
-var musikliste=["Bouncy_Fun_1.mp3","Walker.mp3","Funky_Groove.mp3"];
+var musikliste=["anxiety-julie-michaels.mp3","fall-lisa-hannigan.mp3","my-Baby-nina-simone.mp3", "no-roots-alice-merton.mp3"];
 
 var citater = [
-	"Alt, hvad jeg ved er, at jeg intet ved. (Buzz Slammer)",
-	"Det har jeg aldrig gjort, så det klarer heg helt sikker. (Dave Light)",
-	"Find ikke fejl, find en løsning. (Kid Neumann)",
-	"Husk, at være sød ved andre, ellers får du en på låget. (Bud Spencer)",
-	"Den som prutten lugte kan....... (Arne Nissen)"
+	"Næsten-Øko tomater 2 kr. pr. stk.",
+	"Bananer 2 kr. pr. stk - køb dem inden Peter spiser dem alle sammen",
+	"Varme dåseøl fra Harboe - kom og hent lortet gratis",
+	"Franskbrød fyldt med krummer, nu kun 10kr."
+
 ];
 															  
 visDagensCitat("citat",citater);
 visMusikliste("musikliste",musikliste);
 videoKontrol("koncertvideo",false);
+visOpdateringsDato("sidefod", "white", "center", true);
